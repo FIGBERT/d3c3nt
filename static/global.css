@@ -1,0 +1,126 @@
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #212121;
+  --secondary-color: #4169e1;
+  --tertiary-color: #b6c6f4;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --background-color: #212121;
+    --text-color: #f5f5f5;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 200%;
+  max-width: 40rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--tertiary-color);
+  text-decoration-color: var(--secondary-color);
+}
+
+pre {
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+video, picture, img {
+  width: 100%;
+}
+
+h1::before {
+  content: "#";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+h2::before {
+  content: "##";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+h3::before {
+  content: "###";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+h4::before {
+  content: "####";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+h5::before {
+  content: "#####";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+h6::before {
+  content: "######";
+  padding-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.emoji > svg {
+  width: 2rem;
+  height: auto;
+  vertical-align: top;
+}
+
+.post-preview {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.post-preview > h3 {
+  margin: 0;
+}
+
+.error {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.error > img {
+  max-width: 19rem;
+}
+
+.error > strong {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.error > p {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
