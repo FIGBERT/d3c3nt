@@ -1,5 +1,13 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://namal.figbert.com"
+title = "Namal by FIGBERT"
+description = "A simple, clean, and flexible theme for personal sites."
+
+# The default language; used in feeds.
+default_language = "en"
+
+# When set to "true", a feed is automatically generated.
+generate_feed = true
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
@@ -7,9 +15,16 @@ compile_sass = false
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "two-dark"
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 [extra]
 # Put all your custom variables here
+nav = [
+  { name = "HOME", path = "/" },
+  { name = "POSTS", path = "/posts/" },
+  { name = "PROJECTS", path = "/projects/"}
+]
+
