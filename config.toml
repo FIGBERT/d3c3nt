@@ -1,6 +1,6 @@
 # The URL the site will be built for
-base_url = "https://namal.figbert.com"
-title = "Namal :: FIGBERT"
+base_url = "https://d3c3nt.figbert.com"
+title = "d3c3nt :: FIGBERT"
 description = "A simple, clean, and flexible theme for personal sites."
 
 # The default language; used in feeds.
@@ -27,6 +27,7 @@ nav = [
   { name = "POSTS", path = "/posts/" },
   { name = "PROJECTS", path = "/projects/"}
 ]
+
 icon = "/icon.png"
 404 = "/404.svg"
 twitter = "@therealFIGBERT"

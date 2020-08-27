@@ -1,11 +1,11 @@
-name = "Namal"
+name = "d3c3nt"
 description = "A simple, clean, and flexible theme for personal sites."
 license = "GPLv3"
-homepage = "https://github.com/figbert/namal-zola"
+homepage = "https://github.com/figbert/d3c3nt"
 # The minimum version of Zola required
 min_version = "0.4.0"
 # An optional live demo URL
-demo = "https://namal.figbert.com"
+demo = "https://d3c3nt.figbert.com"
 
 # Any variable there can be overriden in the end user `config.toml`
 # You don't need to prefix variables by the theme name but as this will
