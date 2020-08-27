@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <meta name="theme-color" content="#4169e1"/>
+    <link rel="icon" href="{{ config.extra.icon }}"/>
+    
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    {% if config.extra.twitter %}
+      <meta name="twitter:creator" content="{{ config.extra.twitter }}">
+      <meta name="twitter:site" content="{{ config.extra.twitter }}">
+    {% endif %}
+
+    {% block description %}
+      {% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        <meta name="twitter:description" content="{{ page.description }}">
+      {% else %}
+        <meta name="description" content="{{ config.description }}" />
+        <meta name="twitter:description" content="{{ config.description}}">
+      {% endif %}
+    {% endblock description %}
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ config.title }}">
+    {% endif %}
+
+    {% for link in config.extra.nav %}
+      <link rel="prerender" href="{{ link.path }}" />
+    {% endfor %}
+
+    <title>
+      {% block title %}
+        {% if page.title %}{{ page.title }} :: {% endif %}{{ config.title }}
+      {% endblock title %}
+    </title>
+
+    {% block head %}{% endblock head %}
+    {% block styles %}
+      <link rel="stylesheet" href="{{ get_url(path="global.css") | safe }}">
+    {% endblock styles %}
+    {% block posthead %}{% endblock posthead %}
+  </head>
+  <body>
+    {% block header %}
+      <header>
+        <nav>
+          {% for link in config.extra.nav %}
+            <a href="{{ link.path }}">{{ link.name }}</a>
+          {% endfor %}
+        </nav>
+      </header>
+    {% endblock header %}
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+    {% if config.extra.goatcounter %}
+      <script data-goatcounter="https://{{ config.extra.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    {% endif %}
+  </body>
+</html>
+
