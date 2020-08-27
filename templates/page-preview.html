@@ -1,0 +1,14 @@
+{% macro page_preview(page) %}
+  <div class="page-preview">
+    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+    <small>{{ page.date | date(format="%B %d, %Y") }} :: {{ page.word_count }} words :: {{ page.reading_time }} mins</small>
+    <div>
+      {% if page.summary -%}
+        {{ page.summary | markdown | safe }}
+      {% else %}
+        {{ page.content | safe | striptags | truncate(length=300) }}
+      {%- endif %}
+    </div>
+  </div>
+{% endmacro input %}
+

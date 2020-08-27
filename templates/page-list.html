@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% import "page-preview.html" as page_macro %}
+
+{% block posthead %} 
+  {% for page in section.pages %}
+    <link rel="prerender" href="{{ page.permalink }}" />
+  {% endfor %}
+{% endblock posthead %}
+
+{% block content %}
+  {{ section.content | safe }}
+
+  {% for page in section.pages %}
+    {{ page_macro::page_preview(page=page) }}
+  {% endfor %}
+{% endblock content %}
+

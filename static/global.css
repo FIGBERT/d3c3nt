@@ -94,12 +94,12 @@ h6::before {
   vertical-align: top;
 }
 
-.post-preview {
+.page-preview {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-.post-preview > h3 {
+.page-preview > h3 {
   margin: 0;
 }
 
