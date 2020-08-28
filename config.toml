@@ -24,8 +24,7 @@ build_search_index = false
 # Put all your custom variables here
 nav = [
   { name = "HOME", path = "/" },
-  { name = "POSTS", path = "/posts/" },
-  { name = "PROJECTS", path = "/projects/"}
+  { name = "POSTS", path = "/posts/" }
 ]
 
 icon = "/icon.png"
