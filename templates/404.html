@@ -2,9 +2,9 @@
 
 {% block content %}
   <div class="error">
-    <img src="{{ config.extra.404 }}" alt="404 Page Not Found"/>
+    <img src="{% if config.extra.404_message %}{{ config.extra.404_image }}{% else %}/404.svg{% endif %}" alt="404 Page Not Found"/>
     <strong>404</strong>
-    <p>Page Not Found</p>
+    <p>{% if config.extra.404_message %}{{ config.extra.404_message }}{% else %}Page Not Found{% endif %}</p>
   </div>
 {% endblock content %}
 
