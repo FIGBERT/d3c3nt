@@ -11,6 +11,7 @@ highlight_theme = "two-dark"
 [extra]
 nav = [
   { name = "HOME", path = "/" },
+  { name = "CONFIG", path = "/config" },
   { name = "POSTS", path = "/posts/" }
 ]
 icon = "/icon.png"
