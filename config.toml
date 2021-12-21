@@ -18,6 +18,6 @@ minify_html = true
   d3_nav = [
     { name = "HOME", path = "/" },
     { name = "POSTS", path = "/posts/" },
-    { name = "PROJECTS", path = "/projects/" },
+    { name = "CONFIG", path = "/config/" },
   ]
   d3_icon = "/icon.png"
