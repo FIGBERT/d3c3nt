@@ -2,17 +2,13 @@ name = "d3c3nt"
 description = "A simple, clean, and flexible theme for personal sites."
 license = "GPLv3"
 homepage = "https://github.com/figbert/d3c3nt"
-min_version = "0.11.0"
+min_version = "0.15.0"
 demo = "https://d3c3nt.figbert.com"
 
 [extra]
-nav = [
-  { name = "HOME", path = "/" },
-  { name = "POSTS", path = "/posts/" }
-]
-icon = "/icon.png"
+  d3_nav = []
+  d3_icon = ""
 
 [author]
-name = "FIGBERT"
-homepage = "https://figbert.com"
-
+  name = "FIGBERT"
+  homepage = "https://figbert.com"
