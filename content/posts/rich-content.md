@@ -5,7 +5,7 @@ date = 2020-08-26
 +++
 
 d3c3nt ships with several custom shortcodes to augment CommonMark and add additional functionality to your posts, in addition to those [already provided by Zola][built-in].
-`video`, `image`, `gif`, `audio`, and `emoji` were created as simple, privacy-friendly tools for you to use in your markdown.<!-- more -->
+`video`, `image`, `gif`, and `audio` were created as simple, privacy-friendly tools for you to use in your markdown.<!-- more -->
 
 ## Video
 
@@ -65,11 +65,5 @@ should be a path to an audio file of a different type (`wav`, `ogg`, `mp3`, etc)
 {{ audio(sources=["example.wav", "example.ogg", "example.mp3"]) }}
 ```
 
-## Emoji
-
-To learn how to use the `emoji` shortcode, check out the post on [emoji support in d3c3nt][emoji]!
-
 [built-in]: https://www.getzola.org/documentation/content/shortcodes/#built-in-shortcodes
 [video]: @/posts/rich-content.md#video
-[emoji]: @/posts/emoji-support.md
-
