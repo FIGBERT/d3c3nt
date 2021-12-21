@@ -1,108 +1,174 @@
 :root {
-  --background-color: #f5f5f5;
-  --text-color: #212121;
-  --secondary-color: #4169e1;
-  --tertiary-color: #b6c6f4;
+  --background-color: #1F1E1E;
+  --secondary-color: #214ED4;
+  --tertiary-color: #6082E6;
+  --text-color: #F5F5F5;
+  --link-color: #DCE4F9;
 }
 
-@media(prefers-color-scheme: dark) {
-  :root {
-    --background-color: #212121;
-    --text-color: #f5f5f5;
-  }
-}
-
+/* Main */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Cantarell, Ubuntu, Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
+  padding: 0 3rem 3rem 3rem;
   color: var(--text-color);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   line-height: 200%;
+  font-weight: 400;
   max-width: 40rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 1rem;
-}
-
-a {
-  color: inherit;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--tertiary-color);
-  text-decoration-color: var(--secondary-color);
-}
-
-pre {
-  padding: 1rem;
-  white-space: pre-wrap;
 }
 
 video, picture, img {
   width: 100%;
 }
 
-h1::before {
-  content: "#";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
+p {
+  margin-top: 0;
 }
 
-h2::before {
-  content: "##";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
+article > p {
+  line-height: 2;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-h3::before {
-  content: "###";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
+a {
+  font-weight: 450;
+  color: var(--link-color);
+  text-decoration-color: var(--tertiary-color);
 }
 
-h4::before {
-  content: "####";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
+a:hover {
+  text-decoration-color: var(--secondary-color);
 }
 
-h5::before {
-  content: "#####";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
-}
-
-h6::before {
-  content: "######";
-  padding-right: 0.5rem;
-  color: var(--secondary-color);
-}
-
-.emoji > svg {
-  width: 2rem;
-  height: auto;
-  vertical-align: top;
-}
-
-.page-preview {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-.page-preview > h3 {
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
+  font-weight: 700;
+  position: relative;
 }
 
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.zola-anchor {
+  opacity: 0;
+  position: absolute;
+  right: 101%;
+  transition: opacity .1s linear;
+  color: var(--tertiary-color);
+}
+
+h1:hover > .zola-anchor,
+h2:hover > .zola-anchor,
+h3:hover > .zola-anchor,
+h4:hover > .zola-anchor,
+h5:hover > .zola-anchor,
+h6:hover > .zola-anchor {
+  opacity: 100;
+}
+
+/* Nav */
+nav {
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-around;
+}
+
+nav > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding-bottom: 0.5rem;
+}
+
+/* Code */
+pre {
+  padding: 1rem;
+  white-space: pre-wrap;
+  border: 1px solid #CCC;
+}
+
+pre > code {
+  border: none;
+}
+
+code {
+  font-size: 1rem;
+  padding: 0 4px;
+  border: 1px solid #CCC;
+}
+
+/* Quotes */
+blockquote {
+  border-left: 5px solid var(--secondary-color);
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: var(--tertiary-color);
+}
+
+td, th {
+  border: 1px solid var(--text-color);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Keyboard */
+kbd {
+  color: var(--background-color);
+  font-size: 1.25rem;
+  padding: 0.05rem 0.4rem;
+  text-shadow: 0 1px 0 #FFF;
+  background-color: #E4E6E8;
+  border: 1px solid #726E6E;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(244,245,245,0.15), inset 0 1px 0 0 #FFF;
+}
+
+/* Posts and Projects */
+.date-list {
+  padding: 0;
+}
+
+.date-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 145%;
+  padding: 0 0 1rem 0;
+}
+
+.date-list > li > a {
+  flex-basis: 50%;
+}
+
+/* Error */
 .error {
   display: grid;
   place-items: center;
@@ -110,17 +176,16 @@ h6::before {
   height: 100%;
 }
 
-.error > img {
+.error > svg {
   max-width: 19rem;
 }
 
 .error > strong {
   font-size: 5rem;
-  font-weight: 800;
+  margin-bottom: 1.5rem;
 }
 
 .error > p {
   font-size: 2rem;
-  font-weight: 200;
+  margin: 0;
 }
-
