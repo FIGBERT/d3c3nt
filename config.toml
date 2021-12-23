@@ -21,3 +21,4 @@ minify_html = true
     { name = "CONFIG", path = "/config/" },
   ]
   d3_icon = "/icon.png"
+  d3_twitter = "@therealFIGBERT"

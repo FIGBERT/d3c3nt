@@ -8,6 +8,7 @@ demo = "https://d3c3nt.figbert.com"
 [extra]
   d3_nav = []
   d3_icon = ""
+  d3_twitter = ""
 
 [author]
   name = "FIGBERT"
