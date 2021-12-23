@@ -22,3 +22,4 @@ minify_html = true
   ]
   d3_icon = "/icon.png"
   d3_twitter = "@therealFIGBERT"
+  d3_author = "FIGBERT"

@@ -4,7 +4,7 @@
         <h1><a href="{{ current_url | safe }}">{{ page.title | safe }}</a></h1>
         <small>
           <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
-          by <a href="{{ config.base_url | safe }}">FIGBERT</a>
+          by <a href="{{ config.base_url | safe }}">{{ config.extra.d3_author | safe }}</a>
         </small>
         {{ page.content | safe }}
       </article>
