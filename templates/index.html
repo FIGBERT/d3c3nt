@@ -9,10 +9,10 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title | safe }} :: {% endif %}{{ config.title | safe }}">
     <meta property="og:description" content="{% if page.description %}{{ page.description | safe }}{% else %}{{ config.description | safe }}{% endif %}">
     <meta property="og:type" content="website">
-    {%- if current_url %}
+    {% if current_url %}
     <meta property="og:url" content="{{ current_url | safe }}">
     <link rel="canonical" href="{{ current_url | safe }}">
-    {% endif -%}
+    {% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@{{ config.extra.d3_twitter | safe }}">
     <link rel="icon" href="/icon.png">
@@ -21,13 +21,14 @@
   <body>
     <header>
       <nav>
-      {%- for link in config.extra.d3_nav %}
+      {% for link in config.extra.d3_nav %}
         <a href="{{ link.path | safe }}">{{ link.name }}</a>
-      {%- endfor %}
+      {% endfor %}
       </nav>
       <hr>
     </header>
     <main>
-      {%- block content %}{% endblock content %}    </main>
+      {% block content %}{% endblock content %}
+    </main>
   </body>
 </html>
