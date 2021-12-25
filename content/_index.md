@@ -1,5 +1,6 @@
 +++
 title = "Home"
+template = "section.html"
 +++
 
 # d3c3nt
