@@ -151,6 +151,12 @@ kbd {
   box-shadow: 0 1px 1px rgba(244,245,245,0.15), inset 0 1px 0 0 #FFF;
 }
 
+/* Highlights */
+mark {
+  padding: 0.15rem;
+  background-color: var(--tertiary-color);
+}
+
 /* Posts and Projects */
 .date-list {
   padding: 0;
