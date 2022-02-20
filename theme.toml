@@ -1,7 +1,7 @@
 name = "d3c3nt"
 description = "A simple, clean, and flexible theme for personal sites."
 license = "GPLv3"
-homepage = "https://github.com/figbert/d3c3nt"
+homepage = "https://git.figbert.com/figbert/d3c3nt"
 min_version = "0.15.0"
 demo = "https://d3c3nt.figbert.com"
 
